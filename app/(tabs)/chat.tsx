@@ -1,22 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
-import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 
 export default function TabFourScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
+    <ScrollView style={{ borderWidth: 1, borderColor: 'red' }}>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Chat screen</ThemedText>
         
@@ -29,7 +18,7 @@ export default function TabFourScreen() {
       </ThemedView>
 
 
-    </ParallaxScrollView>
+    </ScrollView>
   );
 }
 
